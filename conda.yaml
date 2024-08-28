@@ -1,0 +1,6 @@
+name: parafashion
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - conda-forge::igl

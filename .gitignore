@@ -5,3 +5,4 @@ lib/glew_no_cmake/*
 debug_build/*
 data/*
 *.idx
+.venv/
