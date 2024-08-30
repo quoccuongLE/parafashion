@@ -6,3 +6,4 @@ debug_build/*
 data/*
 *.idx
 .venv/
+parafashion
