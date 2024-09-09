@@ -1,7 +1,7 @@
 
 #include <igl/readOBJ.h>
 
-//#define ENABLE_PARAM_VIEWER
+#define ENABLE_PARAM_VIEWER
 #ifdef ENABLE_PARAM_VIEWER
 #include <igl/opengl/glfw/Viewer.h>
 #endif
@@ -18,7 +18,6 @@ int main(int argc, char *argv[]){
     Eigen::MatrixXd V_3d, V_2d;
     Eigen::MatrixXi F;
     igl::readOBJ(input_path, V_3d, F);
-
 
     ClothParam cloth(V_3d, F, 0.05);
     bool success = cloth.paramAttempt();

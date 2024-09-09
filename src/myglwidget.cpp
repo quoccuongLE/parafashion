@@ -1230,9 +1230,9 @@ void MyGLWidget::paintGL ()
         GPath.GLAddPoint(vcg::Point2i(PickX,PickY));
         GPath.GlDrawLastPath();
 
-        //GPath.GlDrawLastPath();
-        //TPath.GLAddPoint(vcg::Point2i(PickX,PickY));
-        //TPath.GlDrawLastPath();
+        // GPath.GlDrawLastPath();
+        // TPath.GLAddPoint(vcg::Point2i(PickX,PickY));
+        // TPath.GlDrawLastPath();
     }
     if (hasDoubleClick)
     {
@@ -1367,7 +1367,7 @@ void MyGLWidget::mousePressEvent (QMouseEvent * e)
             PickX=xMouse;
             PickY=yMouse;
             GPath.AddNewPath();
-            //pointToPick=Point2i(xMouse,yMouse);
+            // pointToPick=Point2i(xMouse,yMouse);
         }
     }
     updateGL ();
@@ -1416,7 +1416,8 @@ void MyGLWidget::mouseReleaseEvent (QMouseEvent * e)
     if (user_is_picking)
     {
         user_is_picking = false;
-        //TPath.AddSharpConstraints(GPath.PickedPoints);
+        std::cout<<"User picking"<<std::endl;
+        // TPath.AddSharpConstraints(GPath.PickedPoints);
         //TPath.AddSharpConstraints();
         if (GPath.PickedPoints.back().size() < 1){
             GPath.PickedPoints.pop_back();

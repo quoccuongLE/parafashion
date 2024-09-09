@@ -55,8 +55,9 @@ The following packages are required: `qt5-default libqt5svg5-dev freeglut3-dev` 
 mkdir build
 cd build
 cmake ..
-make -j parafashion
+make -j20 parafashion
 ```
+<!-- cmake -DCMAKE_BUILD_TYPE=Debug .. -->
 
 Then, simply run parafashion with an obj or ply mesh as command-line argument: 
 ```

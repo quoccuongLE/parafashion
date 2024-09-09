@@ -160,7 +160,7 @@ void FieldComputation<TriMeshType>::ComputeField(TriMeshType &mesh,
     if (DebugMsg)
         std::cout<<"Added "<<NumFeatures<<" features"<<std::endl;
 
-    FieldSmootherType::SmoothDirections(mesh,Param);
+    FieldSmootherType::SmoothDirections(mesh, Param, true);
 
     vcg::tri::CrossField<TriMeshType>::UpdateSingularByCross(mesh);
     vcg::tri::CrossField<TriMeshType>::SetVertCrossVectorFromFace(mesh);
